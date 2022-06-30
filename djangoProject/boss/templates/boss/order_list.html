@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+
+	<table border="1">
+		<tr style="text-align: center">
+			<td>주문시간</td>
+			<td>음식</td>
+			<td>배달 예상 시간</td>
+			<td>배달 완료 여부</td>
+		</tr>
+		{% for order in order_list %}
+		<tr>
+			<td>{{ order.order_date }}</td>
+			<td>
+				{% for food in order.orderfood_set.all %}
+					{{ food.food_name }}
+				{% endfor %}
+			</td>
+			<td>
+				{% if order.estimated_time == -1 %}
+					<form method="post" action="{% url 'timeinput' %}">
+						<input type="number" name="estimated_time">분
+						<input type="hidden" name="order_id" value="{{ order.id }}">
+						<input type="submit" value="예상시간 입력">
+					</form>
+				{% else %}
+				{{ order.estimated_time }}
+				{% endif %}
+			</td>
+			<td>
+				{% if order.deliver_finished == 0 %}
+				배송중
+				{% else %}
+				완료
+				{% endif %}
+			</td>
+		</tr>
+		{% endfor %}
+	</table>
+
+</body>
+</html>

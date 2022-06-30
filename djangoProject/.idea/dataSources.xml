@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="db" uuid="a6d0a031-eb77-42cb-a8e6-7e9c27c7c6cd">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db.sqlite3</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+      <libraries>
+        <library>
+          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.36.0.3/sqlite-jdbc-3.36.0.3.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+    <data-source source="LOCAL" name="project1@database-1.clv7g1lmh49f.ap-northeast-2.rds.amazonaws.com" uuid="2d674a21-c383-48d6-a902-8388e56c63d5">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://database-1.clv7g1lmh49f.ap-northeast-2.rds.amazonaws.com:3306/project1</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+  </component>
+</project>
