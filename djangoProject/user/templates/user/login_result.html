@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+
+	{% if isSuccessed == True %}
+		{{ user_info.user_name }}님 로그인에 성공하였습니다.<br>
+		회원구분은
+		{% if user_info.user_type == 0 %}
+			일반사용자 입니다.
+		{% endif %}
+		{% if user_info.user_type == 1 %}
+			사장님 입니다.
+		{% endif %}
+		{% if user_info.user_type == 2 %}
+			배달라이더 입니다.
+		{% endif %}
+	{% endif %}
+	{%  if isSuccessed == False %}
+		로그인에 실패하였습니다.
+	{% endif %}
+
+</body>
+</html>
